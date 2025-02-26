@@ -1,50 +1,40 @@
-/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+  height: 100vh;
+  color: #2e2e2e;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 
-/* Container styles */
 .container {
-  padding: 20px;
-  border-radius: 10px;
+  height: 100vh;
   width: 300px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 10 rgba(0, 0, 0, 0.1);
 }
 
-/* Header styles */
-.header {
-  background-color: #7b61ef;
-  padding: 10px;
-  border-radius: 5px;
-  color: #fff;
-  text-align: end;
+header {
   width: 100%;
+  height: 2rem;
+  background-color: #7b61ef;
+  border-radius: 5px;
+  display: flex; /* Add this line */
+  justify-content: flex-end; /* Center text horizontally */
+  align-items: center;
 }
 
-.header p {
-  margin: 0;
-  font-size: 18px;
-}
-
-/* Main content styles */
-main {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Task list styles */
-ul#task-list {
-  list-style-type: none;
-  padding: 0;
+header p {
+  color: #fff;
+  margin-right: 10px;
 }
