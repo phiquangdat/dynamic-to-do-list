@@ -8,33 +8,32 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 /* Container styles */
 .container {
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header styles */
-header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.header {
   background-color: #7b61ef;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: end;
+  width: 100%;
 }
 
-header p {
-  align-self: flex-end;
-  color: white;
-  padding-right: 10px;
+.header p {
+  margin: 0;
+  font-size: 18px;
 }
 
 /* Main content styles */
