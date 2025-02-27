@@ -67,11 +67,11 @@ main {
   flex-direction: column;
 }
 
-#task-list label {
+.task-container,
+.task-checkbox {
   cursor: pointer;
 }
 
-.completed {
+.completed span {
   text-decoration: line-through;
-  color: #888;
 }
