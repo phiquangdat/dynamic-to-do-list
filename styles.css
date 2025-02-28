@@ -74,8 +74,21 @@ main {
   flex-direction: column;
 }
 
-.task-container,
-.task-checkbox {
+/* Section for added task */
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-container .fa {
+  margin-right: 5px;
+}
+
+.task-checkbox,
+.task-text,
+.task-container i {
   cursor: pointer;
 }
 

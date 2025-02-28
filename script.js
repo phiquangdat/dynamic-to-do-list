@@ -7,8 +7,14 @@ $(document).ready(function () {
     let task = $("#new-task").val();
     let component = `
     <div class="task-container">
-      <input type="checkbox" class="task-checkbox">
-      <span class="task-text">${task}</span>
+      <div class="task-info">
+        <input type="checkbox" class="task-checkbox">
+        <span class="task-text">${task}</span>
+      </div>
+      <div class="task-icons">
+        <i style="font-size:24px" class="fa">&#xf040;</i>
+        <i style="font-size:24px" class="fa">&#xf1f8;</i>
+      </div>
     </div">
     `;
     $("#task-list").append(component);
