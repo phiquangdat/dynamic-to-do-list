@@ -12,8 +12,8 @@ $(document).ready(function () {
         <span class="task-text">${task}</span>
       </div>
       <div class="task-icons">
-        <i style="font-size:24px" class="fa">&#xf040;</i>
-        <i style="font-size:24px" class="fa">&#xf1f8;</i>
+        <i style="font-size:24px" class="fa task-edit">&#xf040;</i>
+        <i style="font-size:24px" class="fa task-remove">&#xf1f8;</i>
       </div>
     </div">
     `;
@@ -31,5 +31,18 @@ $(document).ready(function () {
     // Toggle the checkbox's checked property
     let checkbox = $(this).siblings(".task-checkbox");
     checkbox.prop("checked", !checkbox.prop("checked"));
+  });
+
+  $(document).on("click", ".task-edit", function () {
+    let replacedText = $(this).closest(".task-container").find(".task-text");
+    let currentText = replacedText.text();
+    replacedText.replaceWith(
+      `<input type="text" value="${currentText}" class="task-edit-input">`
+    );
+  });
+
+  $(document).on("blur", ".task-edit-input", function () {
+    let updatedText = $(this).val();
+    $(this).replaceWith(`<span class="task-text">${updatedText}</span>`);
   });
 });
